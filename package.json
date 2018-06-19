@@ -1,10 +1,10 @@
 {
   "name": "babel-plugin-syntax-import-async-component-sync",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "将 `import()` + `asyncComponent` 异步 react 组件加载转化为同步组件的 babel 语法插件。",
   "main": "index.js",
   "scripts": {
-    "release": "standard-version",
+    "release": "standard-version && npm publish",
     "postrelease": "git push && git push origin --tags",
     "test": "mocha"
   },
