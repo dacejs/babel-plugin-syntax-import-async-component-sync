@@ -24,7 +24,14 @@ module.exports = function ({ template, types: t }) {
               t.templateElement({ raw: '', cooked: '' }, true),
             ], importArguments),
         });
-        path.parentPath.parentPath.parentPath.replaceWith(newImport);
+        if (path.parentPath &&
+          path.parentPath.parentPath &&
+          path.parentPath.parentPath.parentPath &&
+          path.parentPath.parentPath.parentPath.node &&
+          path.parentPath.parentPath.parentPath.node.callee &&
+          path.parentPath.parentPath.parentPath.node.callee.name === 'asyncComponent') {
+          path.parentPath.parentPath.parentPath.replaceWith(newImport);
+        }
       },
     },
   };

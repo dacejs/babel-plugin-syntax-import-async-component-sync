@@ -17,6 +17,9 @@ const result = babel.transform(`
       path: '/user',
       exact: true,
       component: asyncComponent(() => import(/* webpackChunkName: "user" */'./pages/user'))
+    },
+    {
+      error: () => import(/* webpackChunkName: "user" */'./pages/user')
     }
   ];
 `, options);
