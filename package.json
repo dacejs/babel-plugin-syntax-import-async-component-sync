@@ -1,0 +1,25 @@
+{
+  "name": "babel-plugin-syntax-import-async-component-sync",
+  "version": "1.0.0",
+  "description": "将 `import()` + `asyncComponent` 异步 react 组件加载转化为同步组件的 babel 语法插件。",
+  "main": "index.js",
+  "scripts": {
+    "release": "standard-version",
+    "postrelease": "git push && git push origin --tags",
+    "test": "mocha"
+  },
+  "keywords": [
+    "import()",
+    "webpack",
+    "isomorphic",
+    "require"
+  ],
+  "author": "zhong.zhi@163.com",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
+    "mocha": "^5.2.0",
+    "should": "^13.2.1"
+  }
+}
